@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Monitor Renda e Endividamento</title>
+<meta name="description" content="Dashboard do Projeto A3: desocupação, rendimento real, inflação e endividamento das famílias no Brasil, 2012 a 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- fonte carregada sem bloquear a página: se o Google demorar ou estiver bloqueado, o dashboard abre com a fonte do sistema -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="faixa">
+    <p class="sobretitulo">Projeto A3 · Análise de Dados e Big Data</p>
+    <h1>Renda, emprego, inflação e endividamento das famílias</h1>
+    <p class="lead">Brasil, <span id="base-periodo">2012T1 a 2026T2</span>: <span id="base-n">58</span> trimestres com dados do IBGE (PNAD Contínua e IPCA) e do Banco Central (SGS 29037).</p>
+  </div>
+</header>
+
+<main id="conteudo" class="faixa">
+
+  <section class="resumo" aria-labelledby="t-resumo">
+    <div class="secao-cab">
+      <h2 id="t-resumo">Situação em <span id="tri-atual">2026T2</span></h2>
+      <p class="nota">Setas: variação em relação ao mesmo trimestre do ano anterior (<span id="tri-anterior">2025T2</span>).</p>
+    </div>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <div class="abas" role="tablist" aria-label="Seções do dashboard">
+    <button type="button" role="tab" id="aba-series" aria-controls="painel-series" aria-selected="true">Séries e relações</button>
+    <button type="button" role="tab" id="aba-correlacao" aria-controls="painel-correlacao" aria-selected="false" tabindex="-1">Correlação por fase</button>
+    <button type="button" role="tab" id="aba-semaforo" aria-controls="painel-semaforo" aria-selected="false" tabindex="-1">Semáforo</button>
+  </div>
+
+  <!-- ===================== Aba 1: séries e relações ===================== -->
+  <section role="tabpanel" id="painel-series" aria-labelledby="aba-series" class="painel">
+    <div class="filtros" role="group" aria-label="Filtro de período">
+      <label for="ano-ini">Período</label>
+      <select id="ano-ini" aria-label="Ano inicial"></select>
+      <span class="ate">a</span>
+      <select id="ano-fim" aria-label="Ano final"></select>
+      <div class="atalhos" id="atalhos">
+        <button type="button" data-ini="2012" data-fim="2026">Tudo</button>
+        <button type="button" data-ini="2012" data-fim="2019">Antes da pandemia</button>
+        <button type="button" data-ini="2020" data-fim="2021">Pandemia</button>
+        <button type="button" data-ini="2022" data-fim="2026">Pós-pandemia</button>
+      </div>
+      <p class="nota filtro-nota">Vale para os gráficos desta aba.</p>
+    </div>
+
+    <article class="cartao">
+      <div class="cartao-cab">
+        <div>
+          <h3>Evolução dos indicadores</h3>
+          <p class="nota"><span class="chave-faixa rec" aria-hidden="true"></span>Recessão 2014T2–2016T4 (CODACE/FGV) <span class="chave-faixa pan" aria-hidden="true"></span>Pandemia 2020–2021</p>
+        </div>
+        <fieldset class="toggles" id="toggles">
+          <legend class="sr">Indicadores exibidos</legend>
+        </fieldset>
+      </div>
+      <p class="leitura" id="leitura-series" aria-live="polite"></p>
+      <div class="grafico" id="g-series"></div>
+    </article>
+
+    <article class="cartao">
+      <div class="cartao-cab">
+        <div>
+          <h3>Relação entre dois indicadores</h3>
+          <p class="nota">Cada ponto é um mês da base mensal, como no relatório (desocupação e rendimento se repetem nos 3 meses do trimestre). A cor vai do mais antigo (claro) ao mais recente (escuro).</p>
+        </div>
+        <div class="campos">
+          <label>Eixo X <select id="eixo-x"></select></label>
+          <label>Eixo Y <select id="eixo-y"></select></label>
+          <label>Destacar fase <select id="fase"></select></label>
+        </div>
+      </div>
+      <div class="grafico" id="g-dispersao"></div>
+      <div class="legenda-tempo" aria-hidden="true"><span id="leg-ini">2012T1</span><span class="degrade"></span><span id="leg-fim">2026T2</span></div>
+      <p class="destaque-r" id="nota-dispersao"></p>
+    </article>
+
+    <article class="cartao">
+      <div class="cartao-cab">
+        <div>
+          <h3>Correlações no período</h3>
+          <p class="nota">Coeficiente de Pearson (r) entre cada par de variáveis na base mensal, de −1 a +1, como na Figura 3 e na seção 5.2 do relatório.</p>
+        </div>
+      </div>
+      <div class="grafico" id="g-matriz"></div>
+      <div class="legenda-div" aria-hidden="true"><span>−1 · sobem em sentidos opostos</span><span class="degrade"></span><span>+1 · sobem juntas</span></div>
+      <p class="nota">Em nível, séries com tendência comum (como renda e endividamento) tendem a ter correlação alta sem que uma explique a outra.</p>
+    </article>
+
+    <details class="cartao dados-tabela">
+      <summary>Ver os dados do período em tabela</summary>
+      <div class="rolagem"><table id="tabela"></table></div>
+      <button type="button" class="botao" id="baixar">Baixar dados do período (CSV)</button>
+    </details>
+  </section>
+
+  <!-- ===================== Aba 2: correlação por fase ===================== -->
+  <section role="tabpanel" id="painel-correlacao" aria-labelledby="aba-correlacao" class="painel" hidden>
+    <article class="cartao">
+      <div class="cartao-cab">
+        <div>
+          <h3>Correlação com a variação anual do rendimento real, por fase</h3>
+          <p class="nota">Mesmas janelas, variáveis e base mensal da seção 5.2 do relatório (Figura 13). Usa a base completa.</p>
+        </div>
+      </div>
+      <div class="legenda" id="leg-barras"></div>
+      <div class="grafico" id="g-barras"></div>
+      <div class="rolagem"><table id="tabela-fases" class="tabela-compacta"></table></div>
+      <p class="nota">Correlação não indica causalidade. Na base mensal, desocupação e rendimento se repetem nos 3 meses de cada trimestre, então os meses não são observações independentes. A fase 2020–2021 tem só 24 meses (8 trimestres), e os coeficientes dela são instáveis.</p>
+    </article>
+  </section>
+
+  <!-- ===================== Aba 3: semáforo ===================== -->
+  <section role="tabpanel" id="painel-semaforo" aria-labelledby="aba-semaforo" class="painel" hidden>
+    <div class="secao-cab">
+      <h3 class="h-secao">Semáforo em <span id="sem-tri">2026T2</span></h3>
+      <p class="nota">Regras definidas pela equipe a partir do histórico (seção 7 do relatório). São referências iniciais, não regras universais.</p>
+    </div>
+    <div class="semaforo" id="semaforo"></div>
+
+    <article class="cartao">
+      <h3>Regras do semáforo</h3>
+      <div class="rolagem"><table id="tabela-regras" class="tabela-compacta"></table></div>
+    </article>
+
+    <article class="cartao">
+      <div class="cartao-cab">
+        <div>
+          <h3>Como o semáforo teria sinalizado em cada trimestre</h3>
+          <p class="nota">As mesmas regras aplicadas a toda a base. Os primeiros trimestres ficam vazios porque as variações em 12 meses precisam de quatro trimestres anteriores.</p>
+        </div>
+        <div class="legenda" id="leg-semaforo"></div>
+      </div>
+      <div class="rolagem"><div class="grafico largo" id="g-historico"></div></div>
+      <p class="nota" id="resumo-vermelhos"></p>
+    </article>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="faixa">
+    <h2 class="sr">Fontes e notas</h2>
+    <ul class="fontes">
+      <li><a href="https://sidra.ibge.gov.br/tabela/6468" target="_blank" rel="noopener">IBGE, PNAD Contínua, tabela 6468</a>: taxa de desocupação</li>
+      <li><a href="https://sidra.ibge.gov.br/tabela/6472" target="_blank" rel="noopener">IBGE, PNAD Contínua, tabela 6472</a>: rendimento médio real</li>
+      <li><a href="https://sidra.ibge.gov.br/tabela/1737" target="_blank" rel="noopener">IBGE, IPCA, tabela 1737</a>: inflação mensal, composta por trimestre</li>
+      <li><a href="https://dadosabertos.bcb.gov.br/dataset/29037-endividamento-das-familias-com-o-sistema-financeiro-nacional-em-relacao-a-renda-acumulada-dos" target="_blank" rel="noopener">Banco Central, SGS 29037</a>: endividamento das famílias, média do trimestre</li>
+    </ul>
+    <p class="nota">Base integrada pelo ETL do projeto (etl.py → dataset_final.csv). Recessão datada pelo CODACE/FGV. Valores do rendimento a preços do trimestre mais recente.</p>
+  </div>
+</footer>
+
+<div class="tooltip" id="tooltip" role="status" hidden></div>
+
+<script src="dados.js?v=12"></script>
+<script src="app.js?v=13"></script>
+</body>
+</html>

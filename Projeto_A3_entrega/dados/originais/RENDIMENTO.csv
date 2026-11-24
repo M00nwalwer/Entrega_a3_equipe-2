@@ -1,0 +1,30 @@
+"Tabela 6472 - Rendimento médio mensal real e nominal das pessoas de 14 anos ou mais de idade ocupadas na semana de referência com rendimento de trabalho, habitualmente recebido em todos os trabalhos - Total, coeficiente de variação, variações em relação ao trimestre anterior e ao mesmo trimestre do ano anterior"
+"Variável - Rendimento médio mensal real das pessoas de 14 anos ou mais de idade ocupadas na semana de referência com rendimento de trabalho, habitualmente recebido em todos os trabalhos (Reais)"
+"","Trimestre"
+"","1º trimestre 2012","2º trimestre 2012","3º trimestre 2012","4º trimestre 2012","1º trimestre 2013","2º trimestre 2013","3º trimestre 2013","4º trimestre 2013","1º trimestre 2014","2º trimestre 2014","3º trimestre 2014","4º trimestre 2014","1º trimestre 2015","2º trimestre 2015","3º trimestre 2015","4º trimestre 2015","1º trimestre 2016","2º trimestre 2016","3º trimestre 2016","4º trimestre 2016","1º trimestre 2017","2º trimestre 2017","3º trimestre 2017","4º trimestre 2017","1º trimestre 2018","2º trimestre 2018","3º trimestre 2018","4º trimestre 2018","1º trimestre 2019","2º trimestre 2019","3º trimestre 2019","4º trimestre 2019","1º trimestre 2020","2º trimestre 2020","3º trimestre 2020","4º trimestre 2020","1º trimestre 2021","2º trimestre 2021","3º trimestre 2021","4º trimestre 2021","1º trimestre 2022","2º trimestre 2022","3º trimestre 2022","4º trimestre 2022","1º trimestre 2023","2º trimestre 2023","3º trimestre 2023","4º trimestre 2023","1º trimestre 2024","2º trimestre 2024","3º trimestre 2024","4º trimestre 2024","1º trimestre 2025","2º trimestre 2025","3º trimestre 2025","4º trimestre 2025","1º trimestre 2026","2º trimestre 2026"
+"Brasil","3166","3176","3196","3181","3232","3268","3311","3281","3347","3320","3349","3341","3340","3326","3286","3232","3238","3198","3224","3252","3293","3260","3272","3298","3323","3329","3318","3343","3361","3320","3325","3353","3391","3538","3577","3434","3404","3308","3174","3061","3106","3136","3252","3310","3330","3329","3384","3410","3460","3520","3506","3555","3596","3635","3645","3734","3795","3738"
+"Fonte: IBGE - Pesquisa Nacional por Amostra de Domicílios Contínua trimestral"
+
+"Notas"
+"Para as variáveis ""Situação da Variação em relação (...)"": 'Z' indica significância estatística considerando 95% de confiança; 'A' indica ausência de significância estatística considerando 95% de confiança.
+A partir do 4º trimestre de 2015, em acordo com as recomendações da 19ª Conferência Internacional de Estatísticos do Trabalho - CIET, da OIT, pessoas em licença remunerada, independentemente do tempo de afastamento, passaram a ser classificadas como ""ocupadas"" e seus rendimentos do trabalho foram coletados normalmente. Anteriormente, as pessoas em licença remunerada na semana de referência da pesquisa e que estavam afastadas por período inferior a 4 meses eram classificadas como ""ocupadas"". Caso esse afastamento fosse igual ou superior a 4 meses, essas pessoas eram definidas como ""fora da força de trabalho"" e, portanto, não se investigava o rendimento do trabalho.
+Além disso, a partir do 4º trimestre de 2015, também passaram a ser classificadas como ""ocupadas"" as pessoas que ajudaram, sem receber remuneração, no trabalho remunerado de parente, adicionalmente àquelas que ajudaram no trabalho remunerado de outro morador do mesmo domicílio. Anteriormente, eram consideradas ""ocupadas"" apenas as pessoas que ajudaram, sem receber remuneração, no trabalho remunerado de outro morador do mesmo domicílio.
+Para cálculo do valor real é utilizado o deflator da média do último trimestre de coleta divulgado, conforme a Nota Técnica (maio/2015 - atualizada em 16/10/2018).
+A partir de 15 de agosto de 2025, as estimativas deste tema passaram a ser divulgadas com base na nova ponderação da pesquisa, conforme a Nota Técnica 02/2025. Consequentemente, a série histórica dos indicadores foi atualizada."
+""
+"Legenda"
+"Símbolo","Significado"
+"-","Zero absoluto, não resultante de um cálculo ou arredondamento.
+Ex: Em determinado município não existem pessoas de 14 anos de idade sem instrução."
+"0","Zero resultante de um cálculo ou arredondamento.
+Ex: A inflação do feijão em determinada Região Metropolitana foi 0.
+Determinado município produziu 400 kg de sementes de girassol e os dados da tabela são expressos em toneladas."
+"X","Valor inibido para não identificar o informante.
+Ex: Determinado município só possui uma empresa produtora de cimento, logo o valor de sua produção deve ser inibido."
+"..","Valor não se aplica.
+Ex: Não se pode obter o total da produção agrícola em determinado município quando os produtos agrícolas são contabilizados com unidades de medida distintas."
+"...","Valor não disponível.
+Ex: A produção de feijão em determinado município não foi pesquisada ou determinado município não existia no ano da pesquisa."
+"A a Z
+(exceto X)","Significa uma faixa de valores. Varia em função da tabela (se for o caso).
+Ex: O nível de precisão da produção estimada de combustíveis está na faixa A (95 a 100%)"

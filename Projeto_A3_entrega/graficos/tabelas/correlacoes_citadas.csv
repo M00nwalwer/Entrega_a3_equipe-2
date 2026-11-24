@@ -1,0 +1,6 @@
+﻿x,y,tipo,r,n_meses
+endividamento_familias,rendimento_real,nível,0.43024913507304186,174
+endividamento_var_pp_12m,rend_var_ano_pct,variação em 12 meses,-0.6866564179062595,162
+desocupacao,rendimento_real,nível,-0.31649785423378873,174
+desocup_var_pp_ano,rend_var_ano_pct,variação em 12 meses,0.0454664834077492,162
+ipca_12m,rend_var_ano_pct,IPCA 12m × variação anual da renda,-0.6983930614485248,162
