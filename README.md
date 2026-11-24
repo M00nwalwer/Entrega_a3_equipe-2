@@ -11,15 +11,11 @@
 | `dados/originais/` | Os 4 arquivos baixados do IBGE (SIDRA) e do Banco Central (SGS) |
 | `dados/gerados/` | As 3 bases geradas pelo `etl.py`: `dataset_final.csv` (mensal), `dataset_trimestral.csv` e `ipca_mensal_tratado.csv` |
 
-O `index.html` desta pasta só abre o dashboard (`dashboard_online/index.html`).
+O `index.html` da raiz só abre o dashboard (`Projeto_A3_entrega/dashboard_online/index.html`).
 
 ## Abrir o dashboard
 
 - **No computador:** dois cliques em `dashboard_online/index.html`.
-- **Online (link para o professor), pelo GitHub Pages:**
-  1. Crie um repositório público no github.com e envie esta pasta inteira (botão *Add file* → *Upload files*, arrastando as pastas e arquivos).
-  2. No repositório: *Settings* → *Pages* → em *Branch*, escolha `main` e a pasta `/ (root)` → *Save*.
-  3. Em 1 ou 2 minutos aparece o link `https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/`, que abre o dashboard.
 
 ## Gerar tudo de novo a partir dos dados originais
 
