@@ -1,4 +1,19 @@
 # Projeto A3 — Renda, emprego, inflação e endividamento das famílias (Brasil, 2012–2026)
+## Sobre o projeto
+
+Projeto A3 da UC Análise de Dados e Big Data, curso de Engenharia da Computação, UNIFACS. Área temática: Indicadores Socioeconômicos.
+
+**Pergunta:** emprego e renda melhores significam famílias em melhor situação financeira?
+
+**O que fizemos:** reunimos quatro séries oficiais do IBGE e do Banco Central numa base de 174 meses (janeiro de 2012 a junho de 2026), com ETL e análises exploratória, diagnóstica e prescritiva.
+
+**O que encontramos:**
+
+- No 2º trimestre de 2026, o desemprego é de 5,4% e a renda média real é de R$ 3.738, mas as dívidas das famílias com o sistema financeiro equivalem a 49,8% da renda de 12 meses.
+- Com a inflação de 12 meses em 8% ou mais, a renda real caiu em 30 de 35 meses.
+- Desde o fim de 2022, renda alta convive com dívida alta, combinação inédita desde 2012.
+
+**Equipe:** Artur Souza Vieira Borges, Diogo Alexandre da Silva Meirinhos, Edenilson Oliveira Nascimento, Gustavo Almeida dos Anjos e Lucas Franca Beraldi.
 ## Links
 
 - **Dashboard:** https://m00nwalwer.github.io/Entrega_a3_equipe-2/
