@@ -1,4 +1,9 @@
 # Projeto A3 — Renda, emprego, inflação e endividamento das famílias (Brasil, 2012–2026)
+## Links
+
+- **Dashboard:** https://m00nwalwer.github.io/Entrega_a3_equipe-2/
+- **Vídeo:**
+Todas as pastas abaixo ficam dentro de `Projeto_A3_entrega/`.
 
 ## O que tem em cada pasta
 
