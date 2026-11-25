@@ -31,6 +31,7 @@ Todas as pastas abaixo ficam dentro de `Projeto_A3_entrega/`.
 | `graficos/` | As 17 figuras do relatório (PNG). Em `graficos/tabelas/`, as tabelas de resultados (CSV) usadas no texto |
 | `dados/originais/` | Os 4 arquivos baixados do IBGE (SIDRA) e do Banco Central (SGS) |
 | `dados/gerados/` | As 3 bases geradas pelo `etl.py`: `dataset_final.csv` (mensal), `dataset_trimestral.csv` e `ipca_mensal_tratado.csv` |
+| `Slides_video_PNG/` | Os 27 slides do vídeo em PNG. Em `slide_18_por_clique/`, as três etapas do slide 18 |
 
 O `index.html` da raiz só abre o dashboard (`Projeto_A3_entrega/dashboard_online/index.html`).
 
