@@ -17,7 +17,7 @@ Projeto A3 da UC Análise de Dados e Big Data, curso de Engenharia da Computaç�
 ## Links
 
 - **Dashboard:** https://m00nwalwer.github.io/Entrega_a3_equipe-2/
-- **Vídeo:** https://youtu.be/eMZAJUK9HF
+- **Vídeo:** https://www.youtube.com/watch?v=eMZAJUK9HFY
   
 Todas as pastas abaixo ficam dentro de `Projeto_A3_entrega/`.
 
