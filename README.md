@@ -26,7 +26,7 @@ Todas as pastas abaixo ficam dentro de `Projeto_A3_entrega/`.
 
 | Pasta | Conteúdo |
 |---|---|
-| `relatorio/` | `Relatorio_A3.pdf` — relatório final |
+| `relatorio/` | `Relatorio_A3 final final.pdf` — relatório final |
 | `dashboard_online/` | Dashboard em HTML, CSS e JavaScript (`index.html`, `style.css`, `app.js`, `dados.js`). Não precisa instalar nada. |
 | `codigo_python/` | `etl.py`, `eda.py`, `eda1.py`, `gerar_dados_site.py` e `requirements.txt` |
 | `graficos/` | As 17 figuras do relatório (PNG). Em `graficos/tabelas/`, as tabelas de resultados (CSV) usadas no texto |
